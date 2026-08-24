@@ -67,6 +67,7 @@
                 <caption>Clientes cadastrados</caption>
                 <thead>
                     <tr>
+                        <th>Foto</th>
                         <th>Nome</th>
                         <th>Endereço</th>
                         <th>Cidade</th>
@@ -79,6 +80,11 @@
                 </thead>
                 <tbody>
                     <tr th:each="cliente : ${clientes}">
+                        <td>
+                            <img th:if="${cliente.fotoCliente != null}"
+                                 th:src="@{clientes/foto/{id}(id=${cliente.idCliente})}"
+                                 width="70" height="80">
+                        </td>
                         <td th:text="${cliente.nomeCliente}"></td>
                         <td th:text="${cliente.enderecoCliente}"></td>
                         <td th:text="${cliente.cidadeCliente}"></td>

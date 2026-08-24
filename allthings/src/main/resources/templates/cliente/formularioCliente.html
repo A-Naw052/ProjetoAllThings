@@ -64,6 +64,11 @@
             <input type="hidden" name="idCliente" th:field="*{idCliente}">
 
             <div class="form-field">
+                <label for="fotoCliente">Foto: *Tamanho máximo: 5mb</label>
+                <input type="file" id="fotoCliente" name="foto">
+            </div>
+
+            <div class="form-field">
                 <label for="nomeCliente">Nome</label>
                 <input type="text" id="nomeCliente" name="nomeCliente" th:field="*{nomeCliente}" placeholder="Nome completo">
             </div>
