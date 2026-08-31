@@ -59,7 +59,7 @@
         <h1>Cadastro de Cliente</h1>
         <p class="form-page__subtitle">Preencha os dados do cliente abaixo</p>
 
-        <form th:action="@{/clientes/salvar}" method="post" th:object="${cliente}">
+        <form th:action="@{/clientes/salvar}" method="post" th:object="${cliente}" enctype="multipart/form-data">
 
             <input type="hidden" name="idCliente" th:field="*{idCliente}">
 
