@@ -28,9 +28,6 @@ public class Usuario {
     private String emailUsuario;
 
     @Column(nullable = false, length = 11)
-    private String telefoneUsuario;
-
-    @Column(nullable = false, length = 11)
     private String cpfUsuario;
 
     @Column(nullable = false, length = 40)
