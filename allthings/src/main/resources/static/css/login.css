@@ -1,0 +1,195 @@
+/* ==========================================================
+   ALL THINGS — login.css
+   ========================================================== */
+
+:root {
+    --preto: #181818;
+    --dourado: #C9932F;
+    --dourado-escuro: #A8791F;
+    --cinza-claro: #F5F5F3;
+    --borda: #E2E0D9;
+    --texto: #222222;
+    --texto-suave: #6B6B6B;
+    --branco: #FFFFFF;
+    --erro: #D4574A;
+    --sucesso: #3C8A5C;
+
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fonte-texto);
+    color: var(--texto);
+    background: var(--cinza-claro);
+    padding: 24px;
+}
+
+a {
+    color: var(--dourado-escuro);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Cartão de login ---------- */
+.login-card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+}
+
+/* ---------- Topo ---------- */
+.card-top {
+    background: var(--preto);
+    padding: 34px 32px 30px;
+    text-align: center;
+}
+
+.logo-area__brand {
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    margin-bottom: 14px;
+}
+
+.card-top h1 {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    font-size: 21px;
+    color: var(--branco);
+    margin-bottom: 6px;
+}
+
+.logo-area__subtitle {
+    font-size: 13px;
+    color: #b8b8b8;
+}
+
+/* ---------- Corpo ---------- */
+.card-body {
+    padding: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    color: var(--texto);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    color: var(--texto);
+    background: var(--cinza-claro);
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color .2s ease, background .2s ease;
+}
+
+input:focus {
+    border-color: var(--dourado);
+    background: var(--branco);
+}
+
+input::placeholder {
+    color: #A6A6A6;
+}
+
+/* ---------- Botão ---------- */
+.btn-submit {
+    margin-top: 6px;
+    padding: 13px 20px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: .5px;
+    color: var(--branco);
+    background: var(--preto);
+    border: 1px solid var(--preto);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.btn-submit:hover {
+    background: var(--dourado-escuro);
+    border-color: var(--dourado-escuro);
+}
+
+/* ---------- Rodapé do cartão ---------- */
+.card-footer-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+/* ---------- Mensagens ---------- */
+.msg-error,
+.msg-logout {
+    margin-top: 16px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.msg-error {
+    background: #FBEAE8;
+    color: var(--erro);
+    border: 1px solid #F3CFC9;
+}
+
+.msg-logout {
+    background: #E9F5EC;
+    color: var(--sucesso);
+    border: 1px solid #C9E7D2;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 420px) {
+    .card-top {
+        padding: 28px 24px 24px;
+    }
+
+    .card-body {
+        padding: 26px 24px;
+    }
+}

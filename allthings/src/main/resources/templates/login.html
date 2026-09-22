@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | All Things</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <div class="login-card">
+
+        <!-- Topo -->
+        <div class="card-top">
+            <div class="logo-area">
+                <p class="logo-area__brand">ALL THINGS</p>
+                <h1>Acesso ao Sistema</h1>
+                <p class="logo-area__subtitle">Bem-vindo ao All Things</p>
+            </div>
+        </div>
+
+        <!-- Corpo -->
+        <div class="card-body">
+            <form th:action="@{/login}" method="post">
+
+                <div class="field">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" placeholder="Seu login">
+                </div>
+
+                <div class="field">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••">
+                </div>
+
+                <button class="btn-submit" type="submit">Entrar</button>
+
+            </form>
+
+            <p class="card-footer-link">
+                Não possui cadastro? <a href="/usuarios/criar">Crie sua conta</a>
+            </p>
+
+            <p class="msg-error" th:if="${param.error}">Login inválido. Verifique suas credenciais.</p>
+            <p class="msg-logout" th:if="${param.logout}">Logout efetuado com sucesso.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
